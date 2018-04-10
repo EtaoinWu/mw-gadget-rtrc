@@ -1376,15 +1376,15 @@ Example:
     });
 
     $wrapper.on('keypress', function (e) {
-      if (e.key == 'S') {
+      if (e.key === 'S') {
         $feed.find('.mw-rtrc-item[data-rcid="' + currentDiffRcid + '"]').addClass('mw-rtrc-item-skipped');
         // Add to array, to re-add class after refresh
         skippedRCIDs.push(currentDiffRcid);
         nextDiff();
-      } else if(e.key == 'N') {
+      } else if (e.key === 'N') {
         nextDiff();
       }
-    })
+    });
 
     // Show helpicons
     $('#mw-rtrc-toggleHelp').click(function (e) {
