@@ -1,3 +1,4 @@
+
 /**
  * Real-Time Recent Changes
  * https://github.com/Krinkle/mw-gadget-rtrc
@@ -1375,7 +1376,7 @@ Example:
       skippedRCIDs.splice(skippedRCIDs.indexOf(currentDiffRcid), 1);
     });
 
-    $wrapper.on('keypress', function (e) {
+    $(document).on('keypress', function (e) {
       if (e.key === 'S') {
         $feed.find('.mw-rtrc-item[data-rcid="' + currentDiffRcid + '"]').addClass('mw-rtrc-item-skipped');
         // Add to array, to re-add class after refresh
